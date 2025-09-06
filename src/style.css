@@ -56,11 +56,11 @@ img {
   transform: translateX(0); /* slide to original position */
 }
 .about-text {
-  flex: 1;                       /* text takes up left half */
+     flex: 0 0 40%;                      /* text takes up left half */
 }
 
 .about-image {
-  flex: 1;                       /* image takes up right half */
+  flex: 0 0 35%;                      /* image takes up right half */
   text-align: right;             /* optional: align image right */
 }
 .about-image img {
