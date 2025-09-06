@@ -23,7 +23,46 @@ footer {
     color: #fff;
 }
 img {
-    max-width: 60%;
+    width: 100%;
     height: auto;
     border-radius: 10px;
+}
+.about-container {
+  display: flex;
+  flex-direction: row; /* side by side */
+  align-items: center; /* vertically center content */
+  gap: 2rem; /* space between text and image */
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.about-text {
+  flex: 1; /* take available space */
+}
+
+.about-image {
+  flex: 1; /* take available space */
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 10px; /* optional, makes the image rounded */
+}
+.about-text, .about-image {
+  opacity: 0; /* start hidden */
+  transition: all 1s ease-out;
+}
+
+.slide-left {
+  transform: translateX(-50px); /* start slightly left */
+}
+
+.slide-right {
+  transform: translateX(50px); /* start slightly right */
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* slide to original position */
 }
