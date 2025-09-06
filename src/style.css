@@ -29,37 +29,24 @@ img {
 }
 .about-container {
   display: flex;
-  flex-direction: row; /* side by side */
-  align-items: center; /* vertically center content */
-  gap: 2rem; /* space between text and image */
-  flex-wrap: wrap; /* makes it responsive */
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.about-text {
-  flex: 1; /* take available space */
-}
-
-.about-image {
-  flex: 1; /* take available space */
-  text-align: center;
-}
-
-.about-image img {
-  max-width: 40%;
-  height: auto;
-  border-radius: 10px; /* optional, makes the image rounded */
-}
 .about-text, .about-image {
   opacity: 0; /* start hidden */
-  transition: all 1s ease-out;
+  transform: translateX(0);
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* smooth bounce effect */
 }
 
 .slide-left {
-  transform: translateX(-50px); /* start slightly left */
+  transform: translateX(-100px); /* start left */
 }
 
 .slide-right {
-  transform: translateX(50px); /* start slightly right */
+  transform: translateX(100px); /* start right */
 }
 
 .slide-in {
